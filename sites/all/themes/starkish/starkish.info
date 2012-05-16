@@ -1,6 +1,6 @@
 name = Starkish
-description = Starkish starter theme for Drupal 7
-screenshot = images/screenshot.gif
+description = The Drupal 7 starter theme for people who hate starter themes.
+screenshot = images/screenshot.png
 core = "7.x"
 project = "starkish"
 engine = phptemplate
@@ -25,18 +25,7 @@ features[] = favicon
 features[] = main_menu
 features[] = secondary_menu
 
-stylesheets[all][] = css/default.css
-stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
-; Compass Support
-; http://drupal.org/project/compass
-compass[status] = 1
-compass[sass_dir] = sass
-compass[css_dir] = css
-
-settings[starkish_tabs] = 1
-settings[starkish_breadcrumb_separator] = »
-settings[wireframe_mode] = 0
 settings[clear_registry] = 0
