@@ -12,7 +12,7 @@ if (theme_get_setting('clear_registry')) {
   drupal_theme_rebuild();
 }
 
-function starkish_preprocess_html(&$vars, $hook) {
+function projectwebapp_preprocess_html(&$vars, $hook) {
   // Adding classes wether #navigation is here or not
   if (!empty($vars['main_menu']) or !empty($vars['sub_menu'])) {
     $vars['classes_array'][] = 'with-nav';
@@ -22,7 +22,7 @@ function starkish_preprocess_html(&$vars, $hook) {
   }
 }
 
-function starkish_preprocess_block(&$vars, $hook) {
+function projectwebapp_preprocess_block(&$vars, $hook) {
   // Add a striping class.
   $vars['classes_array'][] = 'block-' . $vars['block_zebra'];
 
@@ -41,7 +41,7 @@ function starkish_preprocess_block(&$vars, $hook) {
   }
 }
 
-function starkish_preprocess_node(&$vars) {
+function projectwebapp_preprocess_node(&$vars) {
   // Placeholder. Add your node preprocessing code here.
 }
 
@@ -61,7 +61,7 @@ function starkish_preprocess_node(&$vars) {
  * @return
  * 	The converted string
  */	
-function starkish_id_safe($string) {
+function projectwebapp_id_safe($string) {
   // Replace with dashes anything that isn't A-Z, numbers, dashes, or underscores.
   $string = strtolower(preg_replace('/[^a-zA-Z0-9_-]+/', '-', $string));
   // If the first character is not a-z, add 'n' in front.
@@ -84,7 +84,7 @@ function starkish_id_safe($string) {
  * @ingroup themeable
  * 
  */
-function starkish_menu_link(array $variables) {
+function projectwebapp_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
@@ -93,7 +93,7 @@ function starkish_menu_link(array $variables) {
   }
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   // Adding a class depending on the TITLE of the link (not constant)
-  $element['#attributes']['class'][] = starkish_id_safe($element['#title']);
+  $element['#attributes']['class'][] = projectwebapp_id_safe($element['#title']);
   // Adding a class depending on the ID of the link (constant)
   $element['#attributes']['class'][] = 'mid-' . $element['#original_link']['mlid'];
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";

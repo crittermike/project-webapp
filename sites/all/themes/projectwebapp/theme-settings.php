@@ -1,7 +1,7 @@
 <?php
 
 // Form override fo theme settings
-function starkish_form_system_theme_settings_alter(&$form, $form_state) {
+function projectwebapp_form_system_theme_settings_alter(&$form, $form_state) {
   $form['clear_registry'] = array(
     '#type' => 'checkbox',
     '#title' =>  t('Rebuild theme registry on every page.'),

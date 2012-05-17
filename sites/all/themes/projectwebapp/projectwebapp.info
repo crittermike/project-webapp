@@ -1,8 +1,8 @@
-name = Starkish
-description = The Drupal 7 starter theme for people who hate starter themes.
+name = Project Web App
+description = The custom theme for projectwebapp.com.
 screenshot = images/screenshot.png
 core = "7.x"
-project = "starkish"
+project = "projectwebapp"
 engine = phptemplate
 
 regions[page_top] = Page top

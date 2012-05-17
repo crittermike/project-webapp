@@ -6,6 +6,8 @@
     <title><?php print $head_title; ?></title>
     <?php print $styles; ?>
     <?php print $scripts; ?>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,200,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,300' rel='stylesheet' type='text/css'>
   </head>
   <body class="<?php print $classes; ?>" <?php print $attributes;?>>
     <?php print $page_top; ?>
