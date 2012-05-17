@@ -4,6 +4,8 @@
 body {
   font-family: 'Merriweather', 'Liberation Serif', Georgia, Garamond, Times, 'Times New Roman', serif;
   font-size: 80%;
+  background: transparent url(../images/bg-dark-denim.png) repeat;
+  color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,15 +22,18 @@ h5 { font-size: 20px; }
 h6 { font-size: 20px; }
 
 a {
-  background: #FFF67A;
+  background: black;
   border-bottom: 2px solid black;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 a:hover {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   text-decoration: none;
+}
+*:focus {
+  outline: none;
 }
 
 /**************************
@@ -94,6 +99,12 @@ a:hover {
 /**************************
  *         CONTENT        *
  **************************/
+.filter-wrapper, .grippie {
+  display: none;
+}
+.vertical-tabs ul.vertical-tabs-list .selected strong {
+  color: white;
+}
 
 
 /**************************

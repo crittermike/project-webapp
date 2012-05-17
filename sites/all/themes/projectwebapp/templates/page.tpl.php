@@ -20,8 +20,6 @@
   </div>
 
   <div class="main">
-    <?php print $breadcrumb; ?>
-
     <?php if ($page['highlight']): ?>
       <?php print render($page['highlight']) ?>
     <?php endif; ?>
