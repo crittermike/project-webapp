@@ -41,7 +41,6 @@
     <?php endif; ?>
 
     <?php print render($page['content']) ?>
-    <?php print $feed_icons; ?>
 
     <?php if ($main_menu || $secondary_menu): ?>
       <?php print theme('links', array('links' => $main_menu, 'attributes' => array('id' => 'primary', 'class' => array('links', 'clearfix', 'main-menu')))); ?>

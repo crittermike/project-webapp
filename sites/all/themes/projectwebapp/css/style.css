@@ -3,7 +3,7 @@
  **************************/
 body {
   font-family: 'Merriweather', 'Liberation Serif', Georgia, Garamond, Times, 'Times New Roman', serif;
-  font-size: 80%;
+  font-size: 85%;
   background: transparent url(../images/bg-dark-denim.png) repeat;
   color: white;
 }
@@ -34,6 +34,9 @@ a:hover {
 }
 *:focus {
   outline: none;
+}
+p {
+  line-height: 1.5;
 }
 
 /**************************
@@ -99,11 +102,34 @@ a:hover {
 /**************************
  *         CONTENT        *
  **************************/
+.main > h1:first-child {
+  font-size: 30px;
+  font-weight: lighter;
+}
 .filter-wrapper, .grippie {
   display: none;
 }
 .vertical-tabs ul.vertical-tabs-list .selected strong {
   color: white;
+}
+
+.view-with-thumbnails ul,
+.view-with-thumbnails li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.view-with-thumbnails img {
+  float: left;
+  margin: 0 20px 0 0;
+}
+.view-with-thumbnails .views-row {
+  padding: 20px 0;
+  border-bottom: 1px dotted #aaa;
+  overflow: hidden;
+}
+.view-with-thumbnails h3 {
+  margin: 0;
 }
 
 
