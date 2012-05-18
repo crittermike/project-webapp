@@ -28,4 +28,6 @@ features[] = secondary_menu
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
+scripts[] = js/pwa.js
+
 settings[clear_registry] = 0

@@ -113,8 +113,11 @@ p {
   color: white;
 }
 
+.view-with-thumbnails {
+  position: relative;
+}
 .view-with-thumbnails ul,
-.view-with-thumbnails li {
+.view-with-thumbnails ul li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -130,6 +133,30 @@ p {
 }
 .view-with-thumbnails h3 {
   margin: 0;
+}
+.view-with-thumbnails .views-exposed-form label,
+.view-with-thumbnails #edit-sort-bef-combine-created-asc,
+.view-with-thumbnails #edit-sort-bef-combine-title-desc,
+.view-with-thumbnails #edit-sort-bef-combine-random-desc {
+  display: none;
+}
+.view-with-thumbnails .views-exposed-form {
+  position: absolute;
+  top: -55px;
+  right: 0;
+}
+.view-with-thumbnails .views-exposed-form .form-item .form-item {
+  float: left;
+  margin-left: 10px;
+  font-family: 'Yanone Kaffeesatz', Impact, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.view-with-thumbnails .views-exposed-form a {
+  padding: 0 3px;
+  color: #bbb;
 }
 
 
