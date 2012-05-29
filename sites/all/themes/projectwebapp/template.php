@@ -45,6 +45,12 @@ function projectwebapp_preprocess_node(&$vars) {
   // Placeholder. Add your node preprocessing code here.
 }
 
+function projectwebapp_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    $form['search_block_form']['#attributes']['placeholder'] = t('What kind of app are you looking for?');
+  }
+}
+
 
 /**
  * Converts a string to a suitable html ID attribute.

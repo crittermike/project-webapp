@@ -28,9 +28,8 @@ a {
   color: white;
 }
 a:hover {
-  background: white;
-  color: black;
   text-decoration: none;
+  color: #ccc;
 }
 *:focus {
   outline: none;
@@ -61,7 +60,7 @@ p {
   float: left;
   width: 40%;
   margin: 0;
-  padding: 0;
+  padding: 0 0 20px 0;
   line-height: 1;
 }
 .header h1 a {
@@ -69,9 +68,6 @@ p {
   border-bottom: none;
   font-weight: lighter;
   letter-spacing: -3px;
-}
-.header h1 a:hover {
-  background: black;
 }
 .header h2 {
   font-size: 14px;
@@ -93,6 +89,39 @@ p {
   margin-top: 20px; /* Fix for using admin_menu with the overlay. */
 }
 
+
+/**************************
+ *        SIDEBARS        *
+ **************************/
+.page-search .block h2, .search-info, .search-advanced {
+  display: none;
+}
+.region-header {
+  background: transparent url(../images/border-dots.png) repeat-x top;
+  padding-top: 30px;
+  clear: both;
+  margin-top: 30px;
+}
+.region-header input.form-text {
+  font-size: 25px;
+  color: white;
+  font-style: italic;
+  padding: 4px 4px 4px 31px;
+  width: 965px;
+  background: rgba(0, 0, 0, 0.5) url(../images/magnifier.png) no-repeat 5px 6px;
+  border: none;
+  font-family: 'Merriweather', 'Liberation Serif', Georgia, Garamond, Times, 'Times New Roman', serif;
+  outline: none;
+}
+.region-header input.form-submit {
+  display: none;
+}
+ol.search-results {
+  padding-left: 0;
+}
+.search-results .title {
+  font-size: 30px;
+}
 
 /**************************
  *        SIDEBARS        *
@@ -130,6 +159,7 @@ p {
   padding: 20px 0;
   border-bottom: 1px dotted #aaa;
   overflow: hidden;
+  position: relative;
 }
 .view-with-thumbnails h3 {
   margin: 0;
@@ -145,9 +175,9 @@ p {
   top: -55px;
   right: 0;
 }
+.view-with-thumbnails .views-row > a:last-child,
 .view-with-thumbnails .views-exposed-form .form-item .form-item {
   float: left;
-  margin-left: 10px;
   font-family: 'Yanone Kaffeesatz', Impact, sans-serif;
   text-transform: uppercase;
   font-weight: 300;
@@ -157,6 +187,30 @@ p {
 .view-with-thumbnails .views-exposed-form a {
   padding: 0 3px;
   color: #bbb;
+  margin-left: 10px;
+}
+.flag-favorite {
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+.flag-favorite a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: transparent url(../images/heart-sprite.png) no-repeat center top;
+  border-bottom: none;
+}
+.flag-favorite a.unflag-action {
+  background-position: center bottom;
+}
+.flag-waiting .flag-throbber {
+  background: url(flag-throbber.gif) no-repeat right center;
+  padding-right: 13px;
+  display: none;
 }
 
 
