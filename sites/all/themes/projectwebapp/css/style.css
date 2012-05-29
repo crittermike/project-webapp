@@ -4,8 +4,6 @@
 body {
   font-family: 'Merriweather', 'Liberation Serif', Georgia, Garamond, Times, 'Times New Roman', serif;
   font-size: 85%;
-  background: transparent url(../images/bg-dark-denim.png) repeat;
-  color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,20 +20,34 @@ h5 { font-size: 20px; }
 h6 { font-size: 20px; }
 
 a {
-  background: black;
   border-bottom: 2px solid black;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 a:hover {
   text-decoration: none;
-  color: #ccc;
+  color: #333;
+  border-bottom: 2px solid red;
 }
 *:focus {
   outline: none;
 }
+img {
+  border: 2px solid white;
+}
+a:hover img {
+  border: 2px solid red;
+}
 p {
   line-height: 1.5;
+}
+input.form-text, 
+textarea {
+  border: 2px solid black;
+}
+input.form-text:focus,
+textarea:focus {
+  border: 2px solid red;
 }
 
 /**************************
@@ -104,11 +116,11 @@ p {
 }
 .region-header input.form-text {
   font-size: 25px;
-  color: white;
+  color: black;
   font-style: italic;
   padding: 4px 4px 4px 31px;
   width: 965px;
-  background: rgba(0, 0, 0, 0.5) url(../images/magnifier.png) no-repeat 5px 6px;
+  background: rgba(255, 255, 255, 0.5) url(../images/magnifier.png) no-repeat 5px 6px;
   border: none;
   font-family: 'Merriweather', 'Liberation Serif', Georgia, Garamond, Times, 'Times New Roman', serif;
   outline: none;
@@ -138,10 +150,6 @@ ol.search-results {
 .filter-wrapper, .grippie {
   display: none;
 }
-.vertical-tabs ul.vertical-tabs-list .selected strong {
-  color: white;
-}
-
 .view-with-thumbnails {
   position: relative;
 }
@@ -182,11 +190,10 @@ ol.search-results {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 16px;
-  letter-spacing: 1px;
 }
 .view-with-thumbnails .views-exposed-form a {
   padding: 0 3px;
-  color: #bbb;
+  color: #222;
   margin-left: 10px;
 }
 .flag-favorite {
@@ -211,6 +218,34 @@ ol.search-results {
   background: url(flag-throbber.gif) no-repeat right center;
   padding-right: 13px;
   display: none;
+}
+
+.page-node-add label {
+  font-family: 'Yanone Kaffeesatz', Impact, sans-serif;
+  font-weight: normal;
+  font-size: 25px;
+}
+.page-node-add .edit-link-title,
+.page-node-add .description {
+  display: none;
+}
+.page-node-add-app .form-item-title, 
+.page-node-add-app .field-name-field-url, 
+.page-node-add-app .field-name-field-screenshots {
+  float: left;
+  width: 50%;
+  clear: left;
+}
+.page-node-add-app .field-name-body {
+  float: right;
+  width: 50%;
+  margin-top: -190px;
+}
+.page-node-add-app .field-name-body textarea {
+  height: 220px;
+}
+.page-node-add-app .form-actions {
+  clear: both;
 }
 
 
