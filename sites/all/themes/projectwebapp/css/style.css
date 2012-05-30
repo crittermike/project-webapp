@@ -90,13 +90,20 @@ textarea:focus {
 }
 .region-header h2 {
   margin: 0 0 5px 0;
-  font-size: 30px;
-  text-transform: capitalize;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+.region-header p {
+  color: #777;
 }
 .region-header #block-block-1 {
   float: left;
   margin-top: 15px;
   width: 200px;
+}
+.region-header #block-system-main-menu {
+  float: right;
 }
 .region-highlight {
   background: transparent url(../images/border-dots.png) repeat-x bottom;
