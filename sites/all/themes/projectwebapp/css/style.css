@@ -178,10 +178,10 @@ ol.search-results {
 }
 
 /* NODES */
-.node-type-app .main h1 {
+.logged-in.node-type-app .main h1 {
   margin-left: 35px;
 }
-.node-type-app .field-name-body {
+.logged-in.node-type-app .field-name-body {
   padding: 15px 0;
 }
 .node-type-app li.flag-favorite {
@@ -191,7 +191,10 @@ ol.search-results {
 }
 .field.field-name-field-screenshots {
   float: right;
-  margin: -20px 0 0 30px;
+  margin: -50px 0 0 30px;
+}
+.logged-in .field.field-name-field-screenshots {
+  margin-top: -20px;
 }
 
 /* VIEWS */
