@@ -169,6 +169,9 @@ ol.search-results {
 /**************************
  *         CONTENT        *
  **************************/
+.front .messages {
+  margin-bottom: 70px;
+}
 .main > h1.title {
   font-size: 30px;
   font-weight: lighter;
