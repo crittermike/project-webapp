@@ -65,32 +65,42 @@ textarea:focus {
 .header {
   overflow: hidden;
   padding-bottom: 30px;
-  background: transparent url(../images/border-dots.png) repeat-x bottom;
 }
 .header h1 {
   font-size: 75px;
   float: left;
-  width: 40%;
-  margin: 0;
-  padding: 0 0 20px 0;
+  width: 120px;
+  margin: 0 15px 0 0;
+  padding: 0;
   line-height: 1;
 }
 .header h1 a {
-  background: transparent;
   border-bottom: none;
-  font-weight: lighter;
-  letter-spacing: -3px;
+  width: 120px;
+  height: 120px;
+  display: block;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: transparent url(../images/logo.png);
 }
-.header h2 {
-  font-size: 14px;
-  font-family: 'Merriweather', 'Liberation Serif', Georgia, Garamond, Times, 'Times New Roman', serif;
-  float: right;
-  width: 36%;
-  text-transform: none;
-  margin: 0;
-  padding: 0;
-  line-height: 1.3;
-  margin-top: 25px;
+.region-header {
+  float: left;
+  width: 860px;
+}
+.region-header h2 {
+  margin: 0 0 5px 0;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.region-header #block-block-1 {
+  float: left;
+  margin-top: 15px;
+  width: 200px;
+}
+.region-highlight {
+  background: transparent url(../images/border-dots.png) repeat-x bottom;
+  padding-bottom: 25px;
 }
 
 
@@ -100,6 +110,23 @@ textarea:focus {
 .admin-menu #overlay-container {
   margin-top: 20px; /* Fix for using admin_menu with the overlay. */
 }
+.region-header ul.menu {
+  float: right;
+  width: 600px;
+  margin-top: 50px;
+}
+.region-header ul.menu li {
+  margin: 10px;
+  list-style: none;
+  padding: 0;
+  float: right;
+}
+.region-header ul.menu li a {
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: 'Yanone Kaffeesatz', Impact, sans-serif;
+  text-transform: uppercase;
+}
 
 
 /**************************
@@ -108,13 +135,12 @@ textarea:focus {
 .page-search .block h2, .search-info, .search-advanced {
   display: none;
 }
-.region-header {
+.block-search {
   background: transparent url(../images/border-dots.png) repeat-x top;
   padding-top: 30px;
   clear: both;
-  margin-top: 30px;
 }
-.region-header input.form-text {
+.block-search input.form-text {
   font-size: 25px;
   color: black;
   font-style: italic;
@@ -125,7 +151,7 @@ textarea:focus {
   font-family: 'Merriweather', 'Liberation Serif', Georgia, Garamond, Times, 'Times New Roman', serif;
   outline: none;
 }
-.region-header input.form-submit {
+.block-search input.form-submit {
   display: none;
 }
 ol.search-results {
@@ -143,13 +169,29 @@ ol.search-results {
 /**************************
  *         CONTENT        *
  **************************/
-.main > h1:first-child {
+.main > h1.title {
   font-size: 30px;
   font-weight: lighter;
 }
-.filter-wrapper, .grippie {
-  display: none;
+
+/* NODES */
+.node-type-app .main h1 {
+  margin-left: 35px;
 }
+.node-type-app .field-name-body {
+  padding: 15px 0;
+}
+.node-type-app li.flag-favorite {
+  display: block;
+  margin-top: -50px;
+  width: 30px;
+}
+.field.field-name-field-screenshots {
+  float: right;
+  margin: -20px 0 0 30px;
+}
+
+/* VIEWS */
 .view-with-thumbnails {
   position: relative;
 }
@@ -184,6 +226,7 @@ ol.search-results {
   right: 0;
 }
 .view-with-thumbnails .views-row > a:last-child,
+.field-name-field-url a,
 .view-with-thumbnails .views-exposed-form .form-item .form-item {
   float: left;
   font-family: 'Yanone Kaffeesatz', Impact, sans-serif;
@@ -194,9 +237,13 @@ ol.search-results {
 .view-with-thumbnails .views-exposed-form a {
   padding: 0 3px;
   color: #222;
+}
+.view-with-thumbnails .views-exposed-form .form-item > .form-item {
   margin-left: 10px;
 }
-.flag-favorite {
+
+/* FLAGS */
+.view-with-thumbnails .flag-favorite {
   position: absolute;
   top: 30px;
   right: 0;
@@ -214,18 +261,22 @@ ol.search-results {
 .flag-favorite a.unflag-action {
   background-position: center bottom;
 }
-.flag-waiting .flag-throbber {
+.flag-throbber, .flag-waiting .flag-throbber {
   background: url(flag-throbber.gif) no-repeat right center;
   padding-right: 13px;
   display: none;
 }
 
+/* ADD NODE FORM */
 .page-node-add label {
   font-family: 'Yanone Kaffeesatz', Impact, sans-serif;
   font-weight: normal;
   font-size: 25px;
 }
-.page-node-add .edit-link-title,
+.filter-wrapper, 
+.grippie,
+.page-node-add-app .form-required,
+.page-node-add .field-edit-link,
 .page-node-add .description {
   display: none;
 }
@@ -236,15 +287,26 @@ ol.search-results {
   width: 50%;
   clear: left;
 }
+.form-item-field-url-und-0-url {
+  margin-top: 0;
+}
 .page-node-add-app .field-name-body {
   float: right;
   width: 50%;
-  margin-top: -190px;
+  margin-top: -177px;
+  margin-bottom: 30px;
 }
 .page-node-add-app .field-name-body textarea {
   height: 220px;
 }
 .page-node-add-app .form-actions {
+  text-align: right;
+  clear: both;
+}
+.page-node-add-app .form-actions input {
+  font-size: 20px;
+}
+.vertical-tabs {
   clear: both;
 }
 
